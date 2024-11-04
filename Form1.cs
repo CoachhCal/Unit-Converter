@@ -83,6 +83,533 @@ namespace Unit_Converter
 
         /// <summary>
         /// 
+        /// Mass
+        /// 
+        /// </summary>
+
+        public double Microgram(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "Microgram": return number;
+                case "Milligram": return number * 0.001;
+                case "Gram": return number * 0.000001;
+                case "Ounce": return number * 3.527396194E-8;
+                case "Pound": return number * 2.204622621E-9;
+                case "Kilogram": return number * 1.0E-9;
+                case "Stone (UK)": return number * 1.574730444E-10;
+                case "US ton": return number * 1.10231131E-12;
+                case "Imperial ton": return number * 9.842065276E-13;
+                case "Metric ton": return number * 1.0E-12;
+                default: return 0;
+            }
+        }
+
+        public double Milligram(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "Microgram": return number * 1000;
+                case "Milligram": return number;
+                case "Gram": return number * 0.001;
+                case "Ounce": return number * 0.000035274;
+                case "Pound": return number * 0.0000022046;
+                case "Kilogram": return number * 0.000001;
+                case "Stone (UK)": return number * 1.574730444E-7;
+                case "US ton": return number * 0.0000342857;
+                case "Imperial ton": return number * 0.0000306122;
+                case "Metric ton": return number * 1.0E-9;
+                default: return 0;
+            }
+        }
+
+        public double Gram(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "Microgram": return number * 1000000;
+                case "Milligram": return number * 1000;
+                case "Gram": return number;
+                case "Ounce": return number * 0.0352739619;
+                case "Pound": return number * 0.0022046226;
+                case "Kilogram": return number * 0.001;
+                case "Stone (UK)": return number * 0.000157473;
+                case "US ton": return number * 0.0000011023;
+                case "Imperial ton": return number * 9.842065276E-7;
+                case "Metric ton": return number * 0.000001;
+                default: return 0;
+            }
+        }
+
+        public double Ounce(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "Microgram": return number * 28349523.125;
+                case "Milligram": return number * 28349.523125;
+                case "Gram": return number * 28.349523125;
+                case "Ounce": return number;
+                case "Pound": return number * 0.0625;
+                case "Kilogram": return number * 0.0283495231;
+                case "Stone (UK)": return number * 0.0044642857;
+                case "US ton": return number * 0.00003125;
+                case "Imperial ton": return number * 0.0000279018;
+                case "Metric ton": return number * 0.0000283495;
+                default: return 0;
+            }
+        }
+
+        public double Pound(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "Microgram": return number * 453592370;
+                case "Milligram": return number * 453592.37;
+                case "Gram": return number * 453.59237;
+                case "Ounce": return number * 16;
+                case "Pound": return number;
+                case "Kilogram": return number * 0.45359237;
+                case "Stone (UK)": return number * 0.0714285714;
+                case "US ton": return number * 0.0005;
+                case "Imperial ton": return number * 0.0004464286;
+                case "Metric ton": return number * 0.0004535924;
+                default: return 0;
+            }
+        }
+
+        public double Kilogram(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "Microgram": return number * 1000000000;
+                case "Milligram": return number * 1000000;
+                case "Gram": return number * 1000;
+                case "Ounce": return number * 35.27396195;
+                case "Pound": return number * 2.2046226218;
+                case "Kilogram": return number;
+                case "Stone (UK)": return number * 0.1574730444;
+                case "US ton": return number * 0.0011023113;
+                case "Imperial ton": return number * 0.0009842065;
+                case "Metric ton": return number * 0.001;
+                default: return 0;
+            }
+        }
+
+        public double StoneUK(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "Microgram": return number * 6350293180;
+                case "Milligram": return number * 6350293.18;
+                case "Gram": return number * 6350.29318;
+                case "Ounce": return number * 224;
+                case "Pound": return number * 14;
+                case "Kilogram": return number * 6.35029318;
+                case "Stone (UK)": return number;
+                case "US ton": return number * 0.007;
+                case "Imperial ton": return number * 0.00625;
+                case "Metric ton": return number * 0.0063502932;
+                default: return 0;
+            }
+        }
+
+        public double USTon(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "Microgram": return number * 907184740000;
+                case "Milligram": return number * 907184740;
+                case "Gram": return number * 907184.74;
+                case "Ounce": return number * 32000;
+                case "Pound": return number * 2000;
+                case "Kilogram": return number * 907.18474;
+                case "Stone (UK)": return number * 142.85714286;
+                case "US ton": return number;
+                case "Imperial ton": return number * 0.8928571429;
+                case "Metric ton": return number * 0.90718474;
+                default: return 0;
+            }
+        }
+
+        public double ImperialTon(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "Microgram": return number * 1016046908800;
+                case "Milligram": return number * 1016046908.8;
+                case "Gram": return number * 1016046.9088;
+                case "Ounce": return number * 35840;
+                case "Pound": return number * 2240;
+                case "Kilogram": return number * 1016.0469088;
+                case "Stone (UK)": return number * 160;
+                case "US ton": return number * 1.12;
+                case "Imperial ton": return number;
+                case "Metric ton": return number * 1.0160469088;
+                default: return 0;
+            }
+        }
+
+        public double MetricTon(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "Microgram": return number * 1000000000000;
+                case "Milligram": return number * 1000000000;
+                case "Gram": return number * 1000000;
+                case "Ounce": return number * 35273.96195;
+                case "Pound": return number * 2204.6226218;
+                case "Kilogram": return number * 1000;
+                case "Stone (UK)": return number * 157.47304442;
+                case "US ton": return number * 1.1023113109;
+                case "Imperial ton": return number * 0.9842065276;
+                case "Metric ton": return number;
+                default: return 0;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// Speed
+        /// 
+        /// </summary>
+
+        public double FeetPerSecond(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "Feet per second": return number;
+                case "Meters per second": return number * 0.3048;
+                case "Kilometers per hour": return number * 1.09728;
+                case "Miles per hour": return number * 0.6818181818;
+                case "Knots": return number * 0.5924838013;
+                default: return 0;
+            }
+        }
+
+        public double MetersPerSecond(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "Feet per second": return number * 3.280839895;
+                case "Meters per second": return number;
+                case "Kilometers per hour": return number * 3.6;
+                case "Miles per hour": return number * 2.2369362921;
+                case "Knots": return number * 1.9438444924;
+                default: return 0;
+            }
+        }
+
+        public double KilometersPerHour(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "Feet per second": return number * 0.9113444153;
+                case "Meters per second": return number * 0.2777777778;
+                case "Kilometers per hour": return number;
+                case "Miles per hour": return number * 0.6213711922;
+                case "Knots": return number * 0.5399568035;
+                default: return 0;
+            }
+        }
+
+        public double MilesPerHour(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "Feet per second": return number * 1.4666666667;
+                case "Meters per second": return number * 0.44704;
+                case "Kilometers per hour": return number * 1.609344;
+                case "Miles per hour": return number;
+                case "Knots": return number * 0.8689762419;
+                default: return 0;
+            }
+        }
+
+        public double Knots(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "Feet per second": return number * 1.6878098571;
+                case "Meters per second": return number * 0.5144444444;
+                case "Kilometers per hour": return number * 1.852;
+                case "Miles per hour": return number * 1.150779448;
+                case "Knots": return number;
+                default: return 0;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// Pressure
+        /// 
+        /// </summary>
+
+        public double Bars(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "Bars": return number;
+                case "Pascals": return number * 100000;
+                case "Kilopascals": return number * 100;
+                case "Pounds per square inch": return number * 14.503773773;
+                case "Kilopounds per square inch": return number * 0.0145037738;
+                case "Torr": return number * 750.0616827;
+                case "Standard atmosphere": return number * 0.9869232667;
+                default: return 0;
+            }
+        }
+
+        public double Pascals(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "Bars": return number * 0.00001;
+                case "Pascals": return number;
+                case "Kilopascals": return number * 0.001;
+                case "Pounds per square inch": return number * 0.0001450377;
+                case "Kilopounds per square inch": return number * 1.450377377E-7;
+                case "Torr": return number * 0.0075006168;
+                case "Standard atmosphere": return number * 0.0000098692;
+                default: return 0;
+            }
+        }
+
+        public double Kilopascals(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "Bars": return number * 0.01;
+                case "Pascals": return number * 1000;
+                case "Kilopascals": return number;
+                case "Pounds per square inch": return number * 0.1450377377;
+                case "Kilopounds per square inch": return number * 0.0001450377;
+                case "Torr": return number * 7.500616827;
+                case "Standard atmosphere": return number * 0.0098692327;
+                default: return 0;
+            }
+        }
+
+        public double PoundsPerSquareInch(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "Bars": return number * 0.0689475729;
+                case "Pascals": return number * 6894.7572932;
+                case "Kilopascals": return number * 6.8947572932;
+                case "Pounds per square inch": return number;
+                case "Kilopounds per square inch": return number * 0.001;
+                case "Torr": return number * 51.714932572;
+                case "Standard atmosphere": return number * 0.0680459639;
+                default: return 0;
+            }
+        }
+
+        public double KilopoundsPerSquareInch(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "Bars": return number * 68.947572932;
+                case "Pascals": return number * 6894757.2932;
+                case "Kilopascals": return number * 6894.7572932;
+                case "Pounds per square inch": return number * 1000;
+                case "Kilopounds per square inch": return number;
+                case "Torr": return number * 51714.932572;
+                case "Standard atmosphere": return number * 68.04596391;
+                default: return 0;
+            }
+        }
+
+        public double Torr(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "Bars": return number * 0.0013332237;
+                case "Pascals": return number * 133.32236842;
+                case "Kilopascals": return number * 0.1333223684;
+                case "Pounds per square inch": return number * 0.0193367747;
+                case "Kilopounds per square inch": return number * 0.0000193368;
+                case "Torr": return number;
+                case "Standard atmosphere": return number * 0.0013157895;
+                default: return 0;
+            }
+        }
+
+        public double StandardAtmosphere(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "Bars": return number * 1.01325;
+                case "Pascals": return number * 101325;
+                case "Kilopascals": return number * 101.325;
+                case "Pounds per square inch": return number * 14.695948775;
+                case "Kilopounds per square inch": return number * 0.0146959488;
+                case "Torr": return number * 760;
+                case "Standard atmosphere": return number;
+                default: return 0;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// Energy
+        /// 
+        /// </summary>
+
+        public double Joules(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "Joules": return number;
+                case "Kilojoules": return number * 0.001;
+                case "Calories": return number * 0.2390057361;
+                case "Kilocalories": return number * 0.0002390057;
+                case "Watt-hours": return number * 0.0002777778;
+                case "Kilowatt-hours": return number * 2.777777777E-7;
+                case "Foot-pounds": return number * 0.7375621493;
+                case "British thermal units (IT)": return number * 0.0009478171;
+                case "Therms (EC)": return number * 9.478169879E-9;
+                default: return 0;
+            }
+        }
+
+        public double Kilojoules(string unit, double number) //Not done. unsure about btbu's if they are th or it
+        {
+            switch (unit)
+            {
+                case "Joules": return number * 1000;
+                case "Kilojoules": return number;
+                case "Calories": return number * 239.00573614;
+                case "Kilocalories": return number * 0.2390057361;
+                case "Watt-hours": return number * 0.2777777778;
+                case "Kilowatt-hours": return number * 0.0002777778;
+                case "Foot-pounds": return number * 737.5621493;
+                case "British thermal units (IT)": return number * 0.9478171203;
+                case "Therms (EC)": return number * 0.0000094782;
+                default: return 0;
+            }
+        }
+
+        public double Calories(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "Joules": return number * 4.1868;
+                case "Kilojoules": return number * 0.0041868;
+                case "Calories": return number;
+                case "Kilocalories": return number * 0.001;
+                case "Watt-hours": return number * 0.001163;
+                case "Kilowatt-hours": return number * 0.000001163;
+                case "Foot-pounds": return number * 3.0880252067;
+                case "British thermal units (IT)": return number * 0.0039683207;
+                case "Therms (EC)": return number * 3.968320164E-8;
+                default: return 0;
+            }
+        }
+
+        public double Kilocalories(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "Joules": return number * 4186.8;
+                case "Kilojoules": return number * 4.1868;
+                case "Calories": return number * 1000;
+                case "Kilocalories": return number;
+                case "Watt-hours": return number * 1.163;
+                case "Kilowatt-hours": return number * 0.001163;
+                case "Foot-pounds": return number * 3088.0252067;
+                case "British thermal units (IT)": return number * 3.9683207193;
+                case "Therms (EC)": return number * 0.0000396832;
+                default: return 0;
+            }
+        }
+
+        public double WattHours(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "Joules": return number * 3600;
+                case "Kilojoules": return number * 3.6;
+                case "Calories": return number * 859.84522786;
+                case "Kilocalories": return number * 0.8598452279;
+                case "Watt-hours": return number;
+                case "Kilowatt-hours": return number * 0.001;
+                case "Foot-pounds": return number * 2655.2237375;
+                case "British thermal units (IT)": return number * 3.4121416331;
+                case "Therms (EC)": return number * 0.0000341214;
+                default: return 0;
+            }
+        }
+
+        public double KilowattHours(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "Joules": return number * 3600000;
+                case "Kilojoules": return number * 3600;
+                case "Calories": return number * 859845.22786;
+                case "Kilocalories": return number * 859.84522786;
+                case "Watt-hours": return number * 1000;
+                case "Kilowatt-hours": return number;
+                case "Foot-pounds": return number * 2655223.7375;
+                case "British thermal units (IT)": return number * 3412.1416331;
+                case "Therms (EC)": return number * 0.0341214116;
+                default: return 0;
+            }
+        }
+
+        public double FootPounds(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "Joules": return number * 1.3558179483;
+                case "Kilojoules": return number * 0.0013558179;
+                case "Calories": return number * 0.3238315535;
+                case "Kilocalories": return number * 0.0003238316;
+                case "Watt-hours": return number * 0.0003766161;
+                case "Kilowatt-hours": return number * 3.766160967E-7;
+                case "Foot-pounds": return number;
+                case "British thermal units (IT)": return number * 0.0012850675;
+                case "Therms (EC)": return number * 1.285067283E-8;
+                default: return 0;
+            }
+        }
+
+        public double BritishThermalUnitsIT(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "Joules": return number * 1055.0558526;
+                case "Kilojoules": return number * 1.0550558526;
+                case "Calories": return number * 251.99576111;
+                case "Kilocalories": return number * 0.2519957611;
+                case "Watt-hours": return number * 0.2930710702;
+                case "Kilowatt-hours": return number * 0.0002930711;
+                case "Foot-pounds": return number * 778.16926229;
+                case "British thermal units (IT)": return number;
+                case "Therms (EC)": return number * 0.00001;
+                default: return 0;
+            }
+        }
+
+        public double ThermsEC(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "Joules": return number * 105505600;
+                case "Kilojoules": return number * 105505.6;
+                case "Calories": return number * 25199579.631;
+                case "Kilocalories": return number * 25199.579631;
+                case "Watt-hours": return number * 29307.111111;
+                case "Kilowatt-hours": return number * 29.307111111;
+                case "Foot-pounds": return number * 77816937.099;
+                case "British thermal units (IT)": return number * 100000.01397;
+                case "Therms (EC)": return number;
+                default: return 0;
+            }
+        }
+
+        /// <summary>
+        /// 
         /// Time
         /// 
         /// </summary>
