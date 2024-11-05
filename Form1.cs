@@ -83,6 +83,40 @@ namespace Unit_Converter
 
         /// <summary>
         /// 
+        /// Volume
+        /// 
+        /// </summary>
+
+        public double USLiquidGallon(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "US liquid gallons": return number;
+                case "US liquid quarts": return number * 4;
+                case "US liquid pints": return number * 8;
+                case "US cups": return number * 15.7725;
+                case "US fluid ounces": return number * 128;
+                case "US tablespoons": return number * 256;
+                case "US teaspoons": return number * 768;
+                case "Cubic meters": return number * 0.00378541;
+                case "Litres": return number * 3.78541;
+                case "Millilitres": return number * 3785.41;
+                case "Imperial gallons": return number * 0.832674;
+                case "Imperial quarts": return number * 3.3307;
+                case "Imperial pints": return number * 6.66139;
+                case "Imperial cups": return number * 13.3228;
+                case "Imperial fluid ounces": return number * 133.228;
+                case "Imperial tablespoons": return number * 213.165;
+                case "Imperial teaspoons": return number * 639.494;
+                case "Cubic feet": return number * 0.133681;
+                case "Cubic inches": return number * 231;
+               
+                default: return 0;
+            }
+        }
+
+        /// <summary>
+        /// 
         /// Mass
         /// 
         /// </summary>
