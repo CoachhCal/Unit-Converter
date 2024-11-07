@@ -115,6 +115,61 @@ namespace Unit_Converter
             }
         }
 
+        public double USLiquidQuart(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "US liquid gallons": return number * 0.25;
+                case "US liquid quarts": return number;
+                case "US liquid pints": return number * 2;
+                case "US cups": return number * 3.94314;
+                case "US fluid ounces": return number * 32;
+                case "US tablespoons": return number * 64;
+                case "US teaspoons": return number * 192;
+                case "Cubic meters": return number * 0.000946353;
+                case "Litres": return number * 0.946353;
+                case "Millilitres": return number * 946.353;
+                case "Imperial gallons": return number * 0.208169;
+                case "Imperial quarts": return number * 0.832674;
+                case "Imperial pints": return number * 1.66535;
+                case "Imperial cups": return number * 3.3307;
+                case "Imperial fluid ounces": return number * 33.307;
+                case "Imperial tablespoons": return number * 53.2911;
+                case "Imperial teaspoons": return number * 159.873;
+                case "Cubic feet": return number * 0.0334201;
+                case "Cubic inches": return number * 57.75;
+
+                default: return 0;
+            }
+        }
+
+        public double USLiquidPint(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "US liquid gallons": return number * 0.125;
+                case "US liquid quarts": return number * 0.5;
+                case "US liquid pints": return number;
+                case "US cups": return number * 1.97157;
+                case "US fluid ounces": return number * 16;
+                case "US tablespoons": return number * 32;
+                case "US teaspoons": return number * 96;
+                case "Cubic meters": return number * 0.000473176;
+                case "Litres": return number * 0.473176;
+                case "Millilitres": return number * 473.176;
+                case "Imperial gallons": return number * 0.104084;
+                case "Imperial quarts": return number * 0.416337;
+                case "Imperial pints": return number * 0.832674;
+                case "Imperial cups": return number * 1.66535;
+                case "Imperial fluid ounces": return number * 16.6535;
+                case "Imperial tablespoons": return number * 26.6456;
+                case "Imperial teaspoons": return number * 79.9367;
+                case "Cubic feet": return number * 0.0167101;
+                case "Cubic inches": return number * 28.875;
+                default: return 0;
+            }
+        }
+
         /// <summary>
         /// 
         /// Mass
