@@ -115,6 +115,493 @@ namespace Unit_Converter
             }
         }
 
+        public double USLiquidQuart(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "US liquid gallons": return number * 0.25;
+                case "US liquid quarts": return number;
+                case "US liquid pints": return number * 2;
+                case "US cups": return number * 3.94314;
+                case "US fluid ounces": return number * 32;
+                case "US tablespoons": return number * 64;
+                case "US teaspoons": return number * 192;
+                case "Cubic meters": return number * 0.000946353;
+                case "Litres": return number * 0.946353;
+                case "Millilitres": return number * 946.353;
+                case "Imperial gallons": return number * 0.208169;
+                case "Imperial quarts": return number * 0.832674;
+                case "Imperial pints": return number * 1.66535;
+                case "Imperial cups": return number * 3.3307;
+                case "Imperial fluid ounces": return number * 33.307;
+                case "Imperial tablespoons": return number * 53.2911;
+                case "Imperial teaspoons": return number * 159.873;
+                case "Cubic feet": return number * 0.0334201;
+                case "Cubic inches": return number * 57.75;
+
+                default: return 0;
+            }
+        }
+
+        public double USLiquidPint(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "US liquid gallons": return number * 0.125;
+                case "US liquid quarts": return number * 0.5;
+                case "US liquid pints": return number;
+                case "US cups": return number * 1.97157;
+                case "US fluid ounces": return number * 16;
+                case "US tablespoons": return number * 32;
+                case "US teaspoons": return number * 96;
+                case "Cubic meters": return number * 0.000473176;
+                case "Litres": return number * 0.473176;
+                case "Millilitres": return number * 473.176;
+                case "Imperial gallons": return number * 0.104084;
+                case "Imperial quarts": return number * 0.416337;
+                case "Imperial pints": return number * 0.832674;
+                case "Imperial cups": return number * 1.66535;
+                case "Imperial fluid ounces": return number * 16.6535;
+                case "Imperial tablespoons": return number * 26.6456;
+                case "Imperial teaspoons": return number * 79.9367;
+                case "Cubic feet": return number * 0.0167101;
+                case "Cubic inches": return number * 28.875;
+                default: return 0;
+            }
+        }
+
+        public double USCup(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "US liquid gallons": return number * 0.0634013;
+                case "US liquid quarts": return number * 0.253605;
+                case "US liquid pints": return number * 0.50721;
+                case "US cups": return number;
+                case "US fluid ounces": return number * 8.11537;
+                case "US tablespoons": return number * 16.2307;
+                case "US teaspoons": return number * 48.6922;
+                case "Cubic meters": return number * 0.00024;
+                case "Litres": return number * 0.24;
+                case "Millilitres": return number * 240;
+                case "Imperial gallons": return number * 0.0527926;
+                case "Imperial quarts": return number * 0.21117;
+                case "Imperial pints": return number * 0.422341;
+                case "Imperial cups": return number * 0.844682;
+                case "Imperial fluid ounces": return number * 8.44682;
+                case "Imperial tablespoons": return number * 13.5149;
+                case "Imperial teaspoons": return number * 40.5447;
+                case "Cubic feet": return number * 0.00847552;
+                case "Cubic inches": return number * 14.6457;
+                default: return 0;
+            }
+        }
+
+        public double USFluidOunces(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "US liquid gallons": return number * 0.0078125;
+                case "US liquid quarts": return number * 0.03125;
+                case "US liquid pints": return number * 0.0625;
+                case "US cups": return number * 0.123223;
+                case "US fluid ounces": return number;
+                case "US tablespoons": return number * 2;
+                case "US teaspoons": return number * 6;
+                case "Cubic meters": return number * 2.9574e-5;
+                case "Litres": return number * 0.0295735;
+                case "Millilitres": return number * 29.5735;
+                case "Imperial gallons": return number * 0.00650527;
+                case "Imperial quarts": return number * 0.0260211;
+                case "Imperial pints": return number * 0.0520421;
+                case "Imperial cups": return number * 0.104084;
+                case "Imperial fluid ounces": return number * 1.04084;
+                case "Imperial tablespoons": return number * 1.66535;
+                case "Imperial teaspoons": return number * 4.99604;
+                case "Cubic feet": return number * 0.00104438;
+                case "Cubic inches": return number * 1.80469;
+                default: return 0;
+            }
+        }
+
+        public double USTablespoon(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "US liquid gallons": return number * 0.00390625;
+                case "US liquid quarts": return number * 0.015625;
+                case "US liquid pints": return number * 0.03125;
+                case "US cups": return number * 0.0616115;
+                case "US fluid ounces": return number * 0.5;
+                case "US tablespoons": return number;
+                case "US teaspoons": return number * 3;
+                case "Cubic meters": return number * 1.4787e-5;
+                case "Litres": return number * 0.0147868;
+                case "Millilitres": return number * 14.7868;
+                case "Imperial gallons": return number * 0.00325263;
+                case "Imperial quarts": return number * 0.0130105;
+                case "Imperial pints": return number * 0.0260211;
+                case "Imperial cups": return number * 0.0520421;
+                case "Imperial fluid ounces": return number * 0.520421;
+                case "Imperial tablespoons": return number * 0.832674;
+                case "Imperial teaspoons": return number * 2.49802;
+                case "Cubic feet": return number * 0.00052219;
+                case "Cubic inches": return number * 0.902344;
+                default: return 0;
+            }
+        }
+
+        public double USTeaspoon(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "US liquid gallons": return number * 0.00130208;
+                case "US liquid quarts": return number * 0.00520833;
+                case "US liquid pints": return number * 0.0104167;
+                case "US cups": return number * 0.0205372;
+                case "US fluid ounces": return number * 0.166667;
+                case "US tablespoons": return number * 0.333333;
+                case "US teaspoons": return number;
+                case "Cubic meters": return number * 4.9289e-6;
+                case "Litres": return number * 0.00492892;
+                case "Millilitres": return number * 4.92892;
+                case "Imperial gallons": return number * 0.00108421;
+                case "Imperial quarts": return number * 0.00433684;
+                case "Imperial pints": return number * 0.00867369;
+                case "Imperial cups": return number * 0.0173474;
+                case "Imperial fluid ounces": return number * 0.173474;
+                case "Imperial tablespoons": return number * 0.277558;
+                case "Imperial teaspoons": return number * 0.832674;
+                case "Cubic feet": return number * 0.000174063;
+                case "Cubic inches": return number * 0.300781;
+                default: return 0;
+            }
+        }
+
+        public double CubicMeter(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "US liquid gallons": return number * 264.172;
+                case "US liquid quarts": return number * 1056.69;
+                case "US liquid pints": return number * 2113.38;
+                case "US cups": return number * 4166.67;
+                case "US fluid ounces": return number * 33814;
+                case "US tablespoons": return number * 67628;
+                case "US teaspoons": return number * 202884;
+                case "Cubic meters": return number;
+                case "Litres": return number * 1000;
+                case "Millilitres": return number * 1e+6;
+                case "Imperial gallons": return number * 219.969;
+                case "Imperial quarts": return number * 879.877;
+                case "Imperial pints": return number * 1759.75;
+                case "Imperial cups": return number * 3519.51;
+                case "Imperial fluid ounces": return number * 35195.1;
+                case "Imperial tablespoons": return number * 56312.1;
+                case "Imperial teaspoons": return number * 168936;
+                case "Cubic feet": return number * 35.3147;
+                case "Cubic inches": return number * 61023.7;
+                default: return 0;
+            }
+        }
+
+        public double Litre(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "US liquid gallons": return number * 0.264172;
+                case "US liquid quarts": return number * 1.05669;
+                case "US liquid pints": return number * 2.11338;
+                case "US cups": return number * 4.16667;
+                case "US fluid ounces": return number * 33.814;
+                case "US tablespoons": return number * 67.628;
+                case "US teaspoons": return number * 202.884;
+                case "Cubic meters": return number * 0.001;
+                case "Litres": return number;
+                case "Millilitres": return number * 1000;
+                case "Imperial gallons": return number * 0.219969;
+                case "Imperial quarts": return number * 0.879877;
+                case "Imperial pints": return number * 1.75975;
+                case "Imperial cups": return number * 3.51951;
+                case "Imperial fluid ounces": return number * 35.1951;
+                case "Imperial tablespoons": return number * 56.3121;
+                case "Imperial teaspoons": return number * 168.936;
+                case "Cubic feet": return number * 0.0353147;
+                case "Cubic inches": return number * 61.0237;
+                default: return 0;
+            }
+        }
+
+        public double Millilitre(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "US liquid gallons": return number * 0.000264172;
+                case "US liquid quarts": return number * 0.00105669;
+                case "US liquid pints": return number * 0.00211338;
+                case "US cups": return number * 0.00416667;
+                case "US fluid ounces": return number * 0.033814;
+                case "US tablespoons": return number * 0.067628;
+                case "US teaspoons": return number * 0.202884;
+                case "Cubic meters": return number * 1e-6;
+                case "Litres": return number * 0.001;
+                case "Millilitres": return number;
+                case "Imperial gallons": return number * 0.000219969;
+                case "Imperial quarts": return number * 0.000879877;
+                case "Imperial pints": return number * 0.00175975;
+                case "Imperial cups": return number * 0.00351951;
+                case "Imperial fluid ounces": return number * 0.0351951;
+                case "Imperial tablespoons": return number * 0.0563121;
+                case "Imperial teaspoons": return number * 0.168936;
+                case "Cubic feet": return number * 3.5315e-5;
+                case "Cubic inches": return number * 0.0610237;
+                default: return 0;
+            }
+        }
+
+        public double ImperialGallon(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "US liquid gallons": return number * 1.20095;
+                case "US liquid quarts": return number * 4.8038;
+                case "US liquid pints": return number * 9.6076;
+                case "US cups": return number * 18.942;
+                case "US fluid ounces": return number * 153.722;
+                case "US tablespoons": return number * 307.443;
+                case "US teaspoons": return number * 922.33;
+                case "Cubic meters": return number * 0.00454609;
+                case "Litres": return number * 4.54609;
+                case "Millilitres": return number * 4546.09;
+                case "Imperial gallons": return number;
+                case "Imperial quarts": return number * 4;
+                case "Imperial pints": return number * 8;
+                case "Imperial cups": return number * 16;
+                case "Imperial fluid ounces": return number * 160;
+                case "Imperial tablespoons": return number * 256;
+                case "Imperial teaspoons": return number * 768;
+                case "Cubic feet": return number * 0.160544;
+                case "Cubic inches": return number * 277.419;
+                default: return 0;
+            }
+        }
+
+        public double ImperialQuart(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "US liquid gallons": return number * 0.300237;
+                case "US liquid quarts": return number * 1.20095;
+                case "US liquid pints": return number * 2.4019;
+                case "US cups": return number * 4.73551;
+                case "US fluid ounces": return number * 38.4304;
+                case "US tablespoons": return number * 76.8608;
+                case "US teaspoons": return number * 230.582;
+                case "Cubic meters": return number * 0.00113652;
+                case "Litres": return number * 1.13652;
+                case "Millilitres": return number * 1136.52;
+                case "Imperial gallons": return number * 0.25;
+                case "Imperial quarts": return number;
+                case "Imperial pints": return number * 2;
+                case "Imperial cups": return number * 4;
+                case "Imperial fluid ounces": return number * 40;
+                case "Imperial tablespoons": return number * 64;
+                case "Imperial teaspoons": return number * 192;
+                case "Cubic feet": return number * 0.0401359;
+                case "Cubic inches": return number * 69.3549;
+                default: return 0;
+            }
+        }
+
+        public double ImperialPint(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "US liquid gallons": return number * 0.150119;
+                case "US liquid quarts": return number * 0.600475;
+                case "US liquid pints": return number * 1.20095;
+                case "US cups": return number * 2.36776;
+                case "US fluid ounces": return number * 19.2152;
+                case "US tablespoons": return number * 38.4304;
+                case "US teaspoons": return number * 115.291;
+                case "Cubic meters": return number * 0.000568261;
+                case "Litres": return number * 0.568261;
+                case "Millilitres": return number * 568.261;
+                case "Imperial gallons": return number * 0.125;
+                case "Imperial quarts": return number * 0.5;
+                case "Imperial pints": return number;
+                case "Imperial cups": return number * 2;
+                case "Imperial fluid ounces": return number * 20;
+                case "Imperial tablespoons": return number * 32;
+                case "Imperial teaspoons": return number * 96;
+                case "Cubic feet": return number * 0.020068;
+                case "Cubic inches": return number * 34.6774;
+                default: return 0;
+            }
+        }
+
+        public double ImperialCup(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "US liquid gallons": return number * 0.0750594;
+                case "US liquid quarts": return number * 0.300237;
+                case "US liquid pints": return number * 0.600475;
+                case "US cups": return number * 1.18388;
+                case "US fluid ounces": return number * 9.6076;
+                case "US tablespoons": return number * 19.2152;
+                case "US teaspoons": return number * 57.6456;
+                case "Cubic meters": return number * 0.000284131;
+                case "Litres": return number * 0.284131;
+                case "Millilitres": return number * 284.131;
+                case "Imperial gallons": return number * 0.0625;
+                case "Imperial quarts": return number * 0.25;
+                case "Imperial pints": return number * 0.5;
+                case "Imperial cups": return number;
+                case "Imperial fluid ounces": return number * 10;
+                case "Imperial tablespoons": return number * 16;
+                case "Imperial teaspoons": return number * 48;
+                case "Cubic feet": return number * 0.010034;
+                case "Cubic inches": return number * 17.3387;
+                default: return 0;
+            }
+        }
+
+        public double ImperialFluidOunce(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "US liquid gallons": return number * 0.00750594;
+                case "US liquid quarts": return number * 0.0300237;
+                case "US liquid pints": return number * 0.0600475;
+                case "US cups": return number * 0.118388;
+                case "US fluid ounces": return number * 0.96076;
+                case "US tablespoons": return number * 1.92152;
+                case "US teaspoons": return number * 5.76456;
+                case "Cubic meters": return number * 2.8413e-5;
+                case "Litres": return number * 0.0284131;
+                case "Millilitres": return number * 28.4131;
+                case "Imperial gallons": return number * 0.00625;
+                case "Imperial quarts": return number * 0.025;
+                case "Imperial pints": return number * 0.05;
+                case "Imperial cups": return number * 0.1;
+                case "Imperial fluid ounces": return number;
+                case "Imperial tablespoons": return number * 1.6;
+                case "Imperial teaspoons": return number * 4.8;
+                case "Cubic feet": return number * 0.0010034;
+                case "Cubic inches": return number * 1.73387;
+                default: return 0;
+            }
+        }
+
+        public double ImperialTablespoon(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "US liquid gallons": return number * 0.00469121;
+                case "US liquid quarts": return number * 0.0187649;
+                case "US liquid pints": return number * 0.0375297;
+                case "US cups": return number * 0.0739924;
+                case "US fluid ounces": return number * 0.600475;
+                case "US tablespoons": return number * 1.20095;
+                case "US teaspoons": return number * 3.60285;
+                case "Cubic meters": return number * 1.7758e-5;
+                case "Litres": return number * 0.0177582;
+                case "Millilitres": return number * 17.7582;
+                case "Imperial gallons": return number * 0.00390625;
+                case "Imperial quarts": return number * 0.015625;
+                case "Imperial pints": return number * 0.03125;
+                case "Imperial cups": return number * 0.0625;
+                case "Imperial fluid ounces": return number * 0.625;
+                case "Imperial tablespoons": return number;
+                case "Imperial teaspoons": return number * 3;
+                case "Cubic feet": return number * 0.000627124;
+                case "Cubic inches": return number * 1.08367;
+                default: return 0;
+            }
+        }
+
+        public double ImperialTeaspoon(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "US liquid gallons": return number * 0.00156374;
+                case "US liquid quarts": return number * 0.00625495;
+                case "US liquid pints": return number * 0.0125099;
+                case "US cups": return number * 0.0246641;
+                case "US fluid ounces": return number * 0.200158;
+                case "US tablespoons": return number * 0.400317;
+                case "US teaspoons": return number * 1.20095;
+                case "Cubic meters": return number * 5.9194e-6;
+                case "Litres": return number * 0.00591939;
+                case "Millilitres": return number * 5.91939;
+                case "Imperial gallons": return number * 0.00130208;
+                case "Imperial quarts": return number * 0.00520834;
+                case "Imperial pints": return number * 0.0104167;
+                case "Imperial cups": return number * 0.0208333;
+                case "Imperial fluid ounces": return number * 0.208333;
+                case "Imperial tablespoons": return number * 0.333333;
+                case "Imperial teaspoons": return number * 3;
+                case "Cubic feet": return number * 0.000209041;
+                case "Cubic inches": return number * 0.361223;
+                default: return 0;
+            }
+        }
+
+        public double CubicFoot(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "US liquid gallons": return number * 7.48052;
+                case "US liquid quarts": return number * 29.9221;
+                case "US liquid pints": return number * 59.8442;
+                case "US cups": return number * 117.987;
+                case "US fluid ounces": return number * 957.506;
+                case "US tablespoons": return number * 1915.01;
+                case "US teaspoons": return number * 5745.04;
+                case "Cubic meters": return number * 0.0283168;
+                case "Litres": return number * 28.3168;
+                case "Millilitres": return number * 28316.8;
+                case "Imperial gallons": return number * 6.22884;
+                case "Imperial quarts": return number * 24.9153;
+                case "Imperial pints": return number * 49.8307;
+                case "Imperial cups": return number * 99.6614;
+                case "Imperial fluid ounces": return number * 996.614;
+                case "Imperial tablespoons": return number * 1594.58;
+                case "Imperial teaspoons": return number * 4783.74;
+                case "Cubic feet": return number * 0.000209041;
+                case "Cubic inches": return number * 1728;
+                default: return 0;
+            }
+        }
+
+        public double CubicInch(string unit, double number)
+        {
+            switch (unit)
+            {
+                case "US liquid gallons": return number * 0.004329;
+                case "US liquid quarts": return number * 0.017316;
+                case "US liquid pints": return number * 0.034632;
+                case "US cups": return number * 0.0682794;
+                case "US fluid ounces": return number * 0.554113;
+                case "US tablespoons": return number * 1.10823;
+                case "US teaspoons": return number * 3.32468;
+                case "Cubic meters": return number * 1.6387e-5;
+                case "Litres": return number * 0.0163871;
+                case "Millilitres": return number * 16.3871;
+                case "Imperial gallons": return number * 0.00360465;
+                case "Imperial quarts": return number * 0.0144186;
+                case "Imperial pints": return number * 0.0288372;
+                case "Imperial cups": return number * 0.0576744;
+                case "Imperial fluid ounces": return number * 0.576744;
+                case "Imperial tablespoons": return number * 0.92279;
+                case "Imperial teaspoons": return number * 2.76837;
+                case "Cubic feet": return number * 0.000578704;
+                case "Cubic inches": return number * 1728;
+                default: return 0;
+            }
+        }
+
         /// <summary>
         /// 
         /// Mass
