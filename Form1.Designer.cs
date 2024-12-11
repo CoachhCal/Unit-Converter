@@ -167,6 +167,7 @@
             this.convertUnit.Name = "convertUnit";
             this.convertUnit.Size = new System.Drawing.Size(194, 24);
             this.convertUnit.TabIndex = 4;
+            
             // 
             // resultUnit
             // 
@@ -190,22 +191,12 @@
             this.measurementComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.measurementComboBox.ForeColor = System.Drawing.Color.White;
             this.measurementComboBox.FormattingEnabled = true;
-            this.measurementComboBox.Items.AddRange(new object[] {
-            "Area",
-            "Digital Storage",
-            "Energy",
-            "Frequency",
-            "Length",
-            "Mass",
-            "Pressure",
-            "Speed",
-            "Temperature",
-            "Time",
-            "Volume"});
+            this.measurementComboBox.Text = "Area";
             this.measurementComboBox.Location = new System.Drawing.Point(15, 58);
             this.measurementComboBox.Name = "measurementComboBox";
             this.measurementComboBox.Size = new System.Drawing.Size(430, 24);
             this.measurementComboBox.TabIndex = 6;
+            this.measurementComboBox.SelectedIndexChanged += new System.EventHandler(this.measurementComboBox_SelectedIndexChanged);
             // 
             // Form1
             // 
