@@ -121,6 +121,15 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="switchUnits.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAK5JREFUOE+t0LERgkAQhWGCCy3AkNDQUiiBUuzCAggMLMLAIszvAoMrYn07A44H
+        j3GPJfgG78H8AzYisis6etDRg44ebAwppVuMsSP3/poPAaE7gm9cT7N7Jr8Hd0x9fyAygIyfe6nQ0qCG
+        4FELwTMN7oWOHsVBX599lsVasB3/aBOErrgKPGmwBiJHBF8ayzkfpn3xoMVaTBUPWiHUs5gqDpUC2VxB
+        io4edNxOmg8TNL+iePRK1AAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEA4eEAAAEACACs6AAAFgAAACgAAADhAAAAwgEAAAEACAAAAAAAZMgAAAAAAAAAAAAAAAEAAAAB
