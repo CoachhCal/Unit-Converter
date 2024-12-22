@@ -24,7 +24,7 @@ namespace Unit_Converter
 
         private string [] measurements = {"Area","Energy","Frequency","Length","Mass","Pressure","Speed","Temperature","Time","Volume"};
         
-        private Dictionary<string, string[]> measurementDict = new Dictionary<string, string[]>
+        private Dictionary<string, string[]> measurementDict = new Dictionary<string, string[]> //this dictionary is used when selcting the physical quantity. Each key contains the appropriate units of measurement
         {
             {"Area", new string[] {"Square millimeter", "Square centimeter", "Square inch", "Square foot", "Square yard", "Square meter", "Acre", "Hectare", "Square Kilometer", "Square mile" } },
             {"Energy", new string[] {"Joule", "Kilojoule", "Calorie", "Kilocalorie", "Watt-hour", "Kilowatt-hour","Foot-pound", "British thermal unit (IT)", "Therms (EC)" } },
@@ -38,31 +38,28 @@ namespace Unit_Converter
             {"Volume", new string[] {"US liquid gallon", "US liquid quart", "US liquid pint", "US cup", "US fluid ounce", "US tablespoon", "US teaspoon", "Cubic meter", "Liter", "Milliliter", "Imperial gallon", "Imperial quart", "Imperial pint", "Imperial cup", "Imperial fluid ounce", "Imperial tablespoon", "Imperial teaspoon", "Cubic Foot", "Cubic Inch"} }
         };
 
-        string[] area = { "Square millimeter", "Square centimeter", "Square inch", "Square foot", "Square yard", "Square meter", "Acre", "Hectare", "Square Kilometer", "Square mile" };
-        string[] energy = { "g" };
-
         public Form1()
         {
             InitializeComponent();
             this.SetStyle(ControlStyles.ResizeRedraw, true);
-            measurementComboBox.Items.AddRange(measurements);
-            measurementComboBox.SelectedItem = "Area";
-            resultUnit.Items.AddRange(area);
-            convertUnit.Items.AddRange(area);
-            convertUnit.SelectedItem = "Square foot";
+            measurementComboBox.Items.AddRange(measurements); //adds all the physical quantities to the combobox
+            measurementComboBox.SelectedItem = "Area"; //default physical quantity
+            
+            convertUnit.SelectedItem = "Square foot"; //default units of measurements
             resultUnit.SelectedItem = "Square meter";
             this.ActiveControl = unitToConvert;
 
-            notesBox.GotFocus += RemoveText; //https://stackoverflow.com/questions/11873378/adding-placeholder-text-to-textbox
+            notesBox.GotFocus += RemoveText; //modifies the text displayed in the large textbox "Notes": https://stackoverflow.com/questions/11873378/adding-placeholder-text-to-textbox
             notesBox.LostFocus += AddText;
 
         }
 
+        //for the custom exit, minimize, maximize, and moving/resizing the form: https://stackoverflow.com/questions/29024910/how-to-design-a-custom-close-minimize-and-maximize-button-in-windows-form-appli
+
         private void mouseDown(object sender, MouseEventArgs e)
         {
             mouseLocation = new Point(-e.X, -e.Y);
-        }
-
+        } 
         private void mouseMove(object sender, MouseEventArgs e)
         {
             if(e.Button == MouseButtons.Left)
@@ -91,13 +88,12 @@ namespace Unit_Converter
             }
             base.WndProc(ref m);
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
+        } //exit button
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) //maximize button
         {
             if (WindowState == FormWindowState.Normal)
             {
@@ -109,35 +105,35 @@ namespace Unit_Converter
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) //minimize button
         {
             WindowState = FormWindowState.Minimized;
             
 
         }
 
-        private void measurementComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void measurementComboBox_SelectedIndexChanged(object sender, EventArgs e) //changing the physical quantity (length, mass, speed, etc)
         {
-            convertUnit.Items.Clear();
+            //clear bot of the combo boxes containing the units of measurements
+            convertUnit.Items.Clear(); 
             resultUnit.Items.Clear();
 
-            string selectedIdx = measurementComboBox.SelectedItem.ToString();
+            string selectedIdx = measurementComboBox.SelectedItem.ToString(); //find selected index of the physical quantity chosen. This index matches the dictionaries (measurementDict) index. 
 
-            if (measurementDict.ContainsKey(selectedIdx))
+            if (measurementDict.ContainsKey(selectedIdx)) //search dictionary using the selected index
             {
-                convertUnit.Items.AddRange(measurementDict[selectedIdx]);
-                convertUnit.Text = measurementDict[selectedIdx][0];
+                //add the units of measurements to both the combo boxes, selecting an index aswell in each one
+                convertUnit.Items.AddRange(measurementDict[selectedIdx]);  
+                convertUnit.Text = measurementDict[selectedIdx][0]; //sets text as unit of measurement at index 0
                 resultUnit.Items.AddRange(measurementDict[selectedIdx]);
                 resultUnit.Text = measurementDict[selectedIdx][1];
 
             }
         }
 
-        
-
-        private void unitToConvert_TextChanged(object sender, EventArgs e)
+        private void unitToConvert_TextChanged(object sender, EventArgs e) //runs when the text (number) is changed in the unit to convert textbox. 
         {
-            //Console.WriteLine("result unit: " + resultUnit.SelectedItem.ToString());
+            
             if(unitToConvert.Text == string.Empty)
             {
                 conversionResult.Text = "";
@@ -145,78 +141,77 @@ namespace Unit_Converter
             }
             if (!double.TryParse(unitToConvert.Text, out double unitValue)) //try to convert string to double. if successful, create variable called unitValue that holds the double.
             {
-                MessageBox.Show("not a double ");
+                unitToConvert.ForeColor = Color.Red;
                 return;
             }
 
+            unitToConvert.ForeColor = Color.White;
 
-            Console.WriteLine("number: " + unitValue.GetType());
-            Type type = typeof(ConversionMethods);
-            //Console.WriteLine("type of conversionMethods: " + type);
-            string methodName = modifyString(convertUnit.SelectedItem.ToString());
-            //Console.WriteLine("name of method:  " + methodName);
+            Type type = typeof(ConversionMethods); //get type of ConversionMethods(Class)
+            
+            string methodName = modifyString(convertUnit.SelectedItem.ToString()); //The text that is displayed in the combobox for the unit you want to convert (ex. "meter"). ModifyString is a method that removes any non-letter characters 
 
+            MethodInfo methodInfo = type.GetMethod(methodName); //find the method that matches the name of the unit you want to convert, which is located in the ConversionMethods class
+            
+            Object[] parameters = { resultUnit.SelectedItem.ToString(), unitValue }; //object containing the arguments that will be passed into the selected method (see the methods in ConversionMethods class)
 
-            MethodInfo methodInfo = type.GetMethod(methodName);
-            //Console.WriteLine("method info: "  + methodInfo);
-            Object[] parameters = { resultUnit.SelectedItem.ToString(), unitValue };
-
-            if (methodInfo != null) //if it can find the function name to match
+            if (methodInfo != null) //if it can find the function name to match.
             {
-                object result = methodInfo.Invoke(conversionMethods, parameters); //call the function and apss in the parameters to it
+                object result = methodInfo.Invoke(conversionMethods, parameters); //call the function and pass in the object containing the argument for the method
                 conversionResult.Text = Math.Round((double)result, 8).ToString();
             }
             else
             {
-                MessageBox.Show("Method not found");
+                MessageBox.Show("Error: Method not found");
             }
 
         }
 
-        private void resultUnit_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //Console.WriteLine("result unit: " + resultUnit.SelectedItem.ToString());
-            if (!double.TryParse(unitToConvert.Text, out double unitValue)) //try to convert string to double. if successful, create variable called unitValue that holds the double.
-            {
-                //MessageBox.Show("not a double");
-                return;
-            }
-
-
-            //Console.WriteLine("number: " + unitValue.GetType());
-            Type type = typeof(ConversionMethods);
-            //Console.WriteLine("type of conversionMethods: " + type);
-            string methodName = modifyString(convertUnit.SelectedItem.ToString());
-
-            MethodInfo methodInfo = type.GetMethod(methodName);
-            Object[] parameters = { resultUnit.SelectedItem.ToString(), unitValue };
-
-            if (methodInfo != null) //if it can find the function name to match
-            {
-                object result = methodInfo.Invoke(conversionMethods, parameters); //call the function and apss in the parameters to it
-                conversionResult.Text = Math.Round((double)result, 8).ToString();
-            }
-            else
-            {
-                //MessageBox.Show("Method not found");
-            }
-        }
-
-        private string modifyString(string str) //modified from: https://stackoverflow.com/questions/7411438/remove-characters-from-c-sharp-string
+        private void resultUnit_SelectedIndexChanged(object sender, EventArgs e) //same as above (unitToConvert_TextChanged), but triggers only if the selected unit in the "resultUnit" combobox is changed. If you convert meters to miles, changing the combobox containing miles would trigger this
         {
             
+            if (!double.TryParse(unitToConvert.Text, out double unitValue))
+            {
+                return;
+            }
+
+
+            
+            Type type = typeof(ConversionMethods);
+            
+            string methodName = modifyString(convertUnit.SelectedItem.ToString());
+
+            MethodInfo methodInfo = type.GetMethod(methodName);
+            Object[] parameters = { resultUnit.SelectedItem.ToString(), unitValue };
+
+            if (methodInfo != null) //if it can find the function name to match
+            {
+                object result = methodInfo.Invoke(conversionMethods, parameters); 
+                conversionResult.Text = Math.Round((double)result, 8).ToString();
+            }
+            
+        }
+
+        private string modifyString(string str) //changes the text from the comboboxes to perfectly match the method names in "ConversionMethods". modified from: https://stackoverflow.com/questions/7411438/remove-characters-from-c-sharp-string
+        {
+            //For example, the combobox may show "British thermal units (IT)". This needs to be modified to match the method name, which is "BritishthermalunitsIT".
+            //below iterates through the characters in "str" and only keeps the letters (no spaces, parenthesis, etc.)
+
             string fixedString = new string((from c in str
                               where char.IsLetter(c)
                               select c
                    ).ToArray());
-            return fixedString;
+            return fixedString; //return the new string
         }
 
-        private void switchUnits_Click(object sender, EventArgs e)
+        private void switchUnits_Click(object sender, EventArgs e) //button that switches the selected text in the unit combo boxes (ex. "miles -> meters" changes to "meters -> miles")
         {
-
+            string convertString = convertUnit.SelectedItem.ToString(); //save the text in each combobox
+            string resultString = resultUnit.SelectedItem.ToString();
+            convertUnit.Text = resultString; //set the new text in each combobox
+            resultUnit.Text = convertString; 
         }
-        public void RemoveText(object sender, EventArgs e)
+        public void RemoveText(object sender, EventArgs e) //removes the string in the text box if the string matches "Notes..."
         {
             if (notesBox.Text == "Notes...")
             {
@@ -224,7 +219,7 @@ namespace Unit_Converter
             }
         }
 
-        public void AddText(object sender, EventArgs e)
+        public void AddText(object sender, EventArgs e) //displays a string in the textbox if empty
         {
             if (string.IsNullOrWhiteSpace(notesBox.Text))
                 notesBox.Text = "Notes...";
