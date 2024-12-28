@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Unit_Converter
 {
-    internal class ConversionMethods
+    public class ConversionMethods
     {
 
         /// <summary>
