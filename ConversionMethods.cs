@@ -1072,14 +1072,14 @@ namespace Unit_Converter
                 case "Millisecond": return number * 0.000001;
                 case "Second": return number * 1e-9;
                 case "Minute": return number * 1.6667e-11;
-                case "Hour": return number * 2.77783333e-13;
-                case "Day": return number * 1.1574305541667e-14;
-                case "Week": return number * 1.6534722202381e-15;
-                case "Month": return number * 3.8052469668526e-16;
-                case "Year": return number * 3.1710426141553e-17;
-                case "Decade": return number * 3.1710426141553e-18;
-                case "Century": return number * 3.1710426141553e-19;
-                case "Millennium": return number * 3.168808781e-20;
+                case "Hour": return number * 2.7778e-13;
+                case "Day": return number * 1.1574e-14;
+                case "Week": return number * 1.6534285714e-15;
+                case "Month": return number * 3.8051465148421758e-16;
+                case "Calendar year": return number * 3.1710426141553e-17;
+                case "Decade": return number * 3.1710001268e-18;
+                case "Century": return number * 3.17100012680000673e-19;
+                case "Millennium": return number * 3.1710001268e-20;
                 default: return 0;
             }
         }
@@ -1097,10 +1097,10 @@ namespace Unit_Converter
                 case "Day": return number * 1.157407407E-11;
                 case "Week": return number * 1.653439153E-12;
                 case "Month": return number * 3.805175038E-13;
-                case "Year": return number * 3.168808781E-14;
-                case "Decade": return number * 3.168808781E-15;
-                case "Century": return number * 3.168808781E-16;
-                case "Millennium": return number * 3.168808781E-17;
+                case "Calendar year": return number * 3.171e-14;
+                case "Decade": return number * 3.1710001268e-15;
+                case "Century": return number * 3.17100012680000618e-16;
+                case "Millennium": return number * 3.1710001268E-17;
                 default: return 0;
             }
         }
@@ -1118,10 +1118,10 @@ namespace Unit_Converter
                 case "Day": return number * 1.157407407E-8;
                 case "Week": return number * 1.653439153E-9;
                 case "Month": return number * 3.805175038E-10;
-                case "Year": return number * 3.168808781E-11;
-                case "Decade": return number * 3.168808781E-12;
-                case "Century": return number * 3.168808781E-13;
-                case "Millennium": return number * 3.168808781E-14;
+                case "Calendar year": return number * 3.171e-11;
+                case "Decade": return number * 3.1710001268e-12;
+                case "Century": return number * 3.17100012680000629e-13;
+                case "Millennium": return number * 3.1710001268E-14;
                 default: return 0;
             }
         }
@@ -1136,13 +1136,13 @@ namespace Unit_Converter
                 case "Second": return number;
                 case "Minute": return number * 0.0166666667;
                 case "Hour": return number * 0.0002777778;
-                case "Day": return number * 0.0000115741;
-                case "Week": return number * 0.0000016534;
+                case "Day": return number * 1.1574e-5;
+                case "Week": return number * 1.6534e-6;
                 case "Month": return number * 3.805175038E-7;
-                case "Year": return number * 3.168808781E-8;
-                case "Decade": return number * 3.168808781E-9;
-                case "Century": return number * 3.168808781E-10;
-                case "Millennium": return number * 3.168808781E-11;
+                case "Calendar year": return number * 3.171e-8;
+                case "Decade": return number * 3.171e-9;
+                case "Century": return number * 3.171e-10;
+                case "Millennium": return number * 3.171e-11;
                 default: return 0;
             }
         }
@@ -1151,19 +1151,19 @@ namespace Unit_Converter
         {
             switch (unit)
             {
-                case "Nanosecond": return number * 60000000000;
-                case "Microsecond": return number * 60000000;
+                case "Nanosecond": return number * 6e+10;
+                case "Microsecond": return number * 6e+7;
                 case "Millisecond": return number * 60000;
                 case "Second": return number * 60;
                 case "Minute": return number;
                 case "Hour": return number * 0.0166666667;
                 case "Day": return number * 0.0006944444;
-                case "Week": return number * 0.0000992063;
-                case "Month": return number * 0.0000228311;
-                case "Year": return number * 0.0000019013;
-                case "Decade": return number * 1.901285268E-7;
-                case "Century": return number * 1.901285268E-8;
-                case "Millennium": return number * 1.901285268E-9;
+                case "Week": return number * 9.9206e-5;
+                case "Month": return number * 2.2831e-5;
+                case "Calendar year": return number * 1.9026e-6;
+                case "Decade": return number * 1.9026e-7;
+                case "Century": return number * 1.9026e-8;
+                case "Millennium": return number * 1.9026e-9;
                 default: return 0;
             }
         }
@@ -1172,19 +1172,19 @@ namespace Unit_Converter
         {
             switch (unit)
             {
-                case "Nanosecond": return number * 3600000000000;
-                case "Microsecond": return number * 3600000000;
-                case "Millisecond": return number * 3600000;
+                case "Nanosecond": return number * 3.6e+12;
+                case "Microsecond": return number * 3.6e+9;
+                case "Millisecond": return number * 3.6e+6;
                 case "Second": return number * 3600;
                 case "Minute": return number * 60;
                 case "Hour": return number;
                 case "Day": return number * 0.0416666667;
                 case "Week": return number * 0.005952381;
                 case "Month": return number * 0.001369863;
-                case "Year": return number * 0.0001140771;
-                case "Decade": return number * 0.0000114077;
-                case "Century": return number * 0.0000011408;
-                case "Millennium": return number * 1.140771161E-7;
+                case "Calendar year": return number * 0.000114155;
+                case "Decade": return number * 1.14155e-5;
+                case "Century": return number * 1.14155e-6;
+                case "Millennium": return number * 1.14155e-7;
                 default: return 0;
             }
         }
@@ -1193,19 +1193,19 @@ namespace Unit_Converter
         {
             switch (unit)
             {
-                case "Nanosecond": return number * 86400000000000;
-                case "Microsecond": return number * 86400000000;
-                case "Millisecond": return number * 86400000;
+                case "Nanosecond": return number * 8.64e+13;
+                case "Microsecond": return number * 8.64e+10;
+                case "Millisecond": return number * 8.64e+7;
                 case "Second": return number * 86400;
                 case "Minute": return number * 1440;
                 case "Hour": return number * 24;
                 case "Day": return number;
                 case "Week": return number * 0.1428571429;
                 case "Month": return number * 0.0328767123;
-                case "Year": return number * 0.0027378508;
-                case "Decade": return number * 0.0002737851;
-                case "Century": return number * 0.0000273785;
-                case "Millennium": return number * 0.0000027379;
+                case "Calendar year": return number * 0.00273973;
+                case "Decade": return number * 0.000273973;
+                case "Century": return number * 2.73973e-5;
+                case "Millennium": return number * 2.73973e-6;
                 default: return 0;
             }
         }
@@ -1214,19 +1214,19 @@ namespace Unit_Converter
         {
             switch (unit)
             {
-                case "Nanosecond": return number * 604800000000002;
-                case "Microsecond": return number * 604800000000;
-                case "Millisecond": return number * 604800000;
+                case "Nanosecond": return number * 6.048e+14;
+                case "Microsecond": return number * 6.048e+11;
+                case "Millisecond": return number * 6.048e+8;
                 case "Second": return number * 604800;
                 case "Minute": return number * 10080;
                 case "Hour": return number * 168;
                 case "Day": return number * 7;
                 case "Week": return number;
                 case "Month": return number * 0.2301369863;
-                case "Year": return number * 0.0191649555;
-                case "Decade": return number * 0.0019164956;
-                case "Century": return number * 0.0001916496;
-                case "Millennium": return number * 0.000019165;
+                case "Calendar year": return number * 0.0191781;
+                case "Decade": return number * 0.00191781;
+                case "Century": return number * 0.000191781;
+                case "Millennium": return number * 0.0000191781;
                 default: return 0;
             }
         }
@@ -1235,37 +1235,37 @@ namespace Unit_Converter
         {
             switch (unit)
             {
-                case "Nanosecond": return number * 2628000000000000;
-                case "Microsecond": return number * 2628000000000;
-                case "Millisecond": return number * 2628000000;
-                case "Second": return number * 2628000;
+                case "Nanosecond": return number * 2.628e+15;
+                case "Microsecond": return number * 2.628e+12;
+                case "Millisecond": return number * 2.628e+9;
+                case "Second": return number * 2.628e+6;
                 case "Minute": return number * 43800;
-                case "Hour": return number * 730;
+                case "Hour": return number * 730.001;
                 case "Day": return number * 30.416666667;
                 case "Week": return number * 4.3452380952;
                 case "Month": return number;
-                case "Year": return number * 0.0832762948;
-                case "Decade": return number * 0.0083276295;
-                case "Century": return number * 0.0008327629;
-                case "Millennium": return number * 0.0000832763;
+                case "Calendar year": return number * 0.0833334;
+                case "Decade": return number * 0.00833334;
+                case "Century": return number * 0.000833334;
+                case "Millennium": return number * 0.0000833334;
                 default: return 0;
             }
         }
 
-        public double Year(string unit, double number)
+        public double Calendaryear(string unit, double number)
         {
             switch (unit)
             {
-                case "Nanosecond": return number * 31557599999999904;
-                case "Microsecond": return number * 31557600000000;
-                case "Millisecond": return number * 31557600000;
-                case "Second": return number * 31557600;
-                case "Minute": return number * 525960;
-                case "Hour": return number * 8766;
-                case "Day": return number * 365.25;
-                case "Week": return number * 52.178571429;
-                case "Month": return number * 12.008219178;
-                case "Year": return number;
+                case "Nanosecond": return number * 3.154e+16;
+                case "Microsecond": return number * 3.154e+13;
+                case "Millisecond": return number * 3.154e+10;
+                case "Second": return number * 3.154e+7;
+                case "Minute": return number * 525600;
+                case "Hour": return number * 8760;
+                case "Day": return number * 365;
+                case "Week": return number * 52.1429;
+                case "Month": return number * 12;
+                case "Calendar year": return number;
                 case "Decade": return number * 0.1;
                 case "Century": return number * 0.01;
                 case "Millennium": return number * 0.001;
@@ -1276,16 +1276,16 @@ namespace Unit_Converter
         {
             switch (unit)
             {
-                case "Nanosecond": return number * 315575999999999040;
-                case "Microsecond": return number * 315575999999999;
-                case "Millisecond": return number * 315576000000;
-                case "Second": return number * 315576000;
-                case "Minute": return number * 5259600;
-                case "Hour": return number * 8766;
-                case "Day": return number * 3652.5;
-                case "Week": return number * 521.78571429;
-                case "Month": return number * 120.08219178;
-                case "Year": return number * 10;
+                case "Nanosecond": return number * 3.154e+17;
+                case "Microsecond": return number * 3.154e+14;
+                case "Millisecond": return number * 3.154e+11;
+                case "Second": return number * 3.154e+8;
+                case "Minute": return number * 5.256e+6;
+                case "Hour": return number * 87600;
+                case "Day": return number * 3650;
+                case "Week": return number * 521.429;
+                case "Month": return number * 120;
+                case "Calendar year": return number * 10;
                 case "Decade": return number;
                 case "Century": return number * 0.1;
                 case "Millennium": return number * 0.01;
@@ -1297,16 +1297,16 @@ namespace Unit_Converter
         {
             switch (unit)
             {
-                case "Nanosecond": return number * 3155759999999990300;
-                case "Microsecond": return number * 3155759999999991;
-                case "Millisecond": return number * 3155760000000;
-                case "Second": return number * 3155760000;
-                case "Minute": return number * 52596000;
-                case "Hour": return number * 876600;
-                case "Day": return number * 36525;
-                case "Week": return number * 5217.8571429;
-                case "Month": return number * 1200.8219178;
-                case "Year": return number * 100;
+                case "Nanosecond": return number * 3.154e+18;
+                case "Microsecond": return number * 3.154e+15;
+                case "Millisecond": return number * 3.154e+12;
+                case "Second": return number * 3.154e+9;
+                case "Minute": return number * 5.256e+7;
+                case "Hour": return number * 876000;
+                case "Day": return number * 36500;
+                case "Week": return number * 5214.29;
+                case "Month": return number * 1200;
+                case "Calendar year": return number * 100;
                 case "Decade": return number * 10;
                 case "Century": return number;
                 case "Millennium": return number * 0.1;
@@ -1318,16 +1318,16 @@ namespace Unit_Converter
         {
             switch (unit)
             {
-                case "Nanosecond": return number * 3.15575999999999e+19;
-                case "Microsecond": return number * 31557599999999904;
-                case "Millisecond": return number * 31557600000000;
-                case "Second": return number * 31557600000;
-                case "Minute": return number * 525960000;
-                case "Hour": return number * 8766000;
-                case "Day": return number * 365250;
-                case "Week": return number * 52178.571429;
-                case "Month": return number * 12008.219178;
-                case "Year": return number * 1000;
+                case "Nanosecond": return number * 3.154e+19;
+                case "Microsecond": return number * 3.154e+16;
+                case "Millisecond": return number * 3.154e+13;
+                case "Second": return number * 3.154e+10;
+                case "Minute": return number * 5.256e+8;
+                case "Hour": return number * 8760000;
+                case "Day": return number * 365000;
+                case "Week": return number * 52142.9;
+                case "Month": return number * 12000;
+                case "Calendar year": return number * 1000;
                 case "Decade": return number * 100;
                 case "Century": return number * 10;
                 case "Millennium": return number;
@@ -1400,8 +1400,8 @@ namespace Unit_Converter
             switch (unit)
             {
                 case "Celsius": return number;
-                case "Fahrenheit": return number * 33.8;
-                case "Kelvin": return number * 274.15;
+                case "Fahrenheit": return (number*9/5) + 32;
+                case "Kelvin": return number + 273.15;
                 default: return 0;
             }
         }
@@ -1410,9 +1410,9 @@ namespace Unit_Converter
         {
             switch (unit)
             {
-                case "Celsius": return number * -17.222222222;
+                case "Celsius": return (number-32) * 5/9;
                 case "Fahrenheit": return number;
-                case "Kelvin": return number * 255.92777778;
+                case "Kelvin": return (number-32) * 5/9 + 273.15;
                 default: return 0;
             }
         }
@@ -1421,8 +1421,8 @@ namespace Unit_Converter
         {
             switch (unit)
             {
-                case "Celsius": return number * -272.15;
-                case "Fahrenheit": return number * -457.87;
+                case "Celsius": return number - 273.15;
+                case "Fahrenheit": return (number - 273.15) * 9/5 + 32;
                 case "Kelvin": return number;
                 default: return 0;
             }

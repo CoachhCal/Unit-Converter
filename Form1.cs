@@ -34,7 +34,7 @@ namespace Unit_Converter
             {"Pressure" ,new string[] {"Bar", "Pascal", "Kilopascal", "Pound per square inch", "Kilopound per square inch", "Torr", "Standard atmosphere"} },
             {"Speed", new string[] {"Foot per second", "Meter per second", "Kilometer per hour", "Mile per hour", "Knot" } },
             {"Temperature", new string[] {"Celsius", "Fahrenheit", "Kelvin"} },
-            {"Time", new string[] {"Nanosecond", "Microsecond", "Millisecond", "Second", "Minute", "Hour", "Day", "Week", "Month", "Year", "Decade", "Century", "Millennium"} },
+            {"Time", new string[] {"Nanosecond", "Microsecond", "Millisecond", "Second", "Minute", "Hour", "Day", "Week", "Month", "Calendar year", "Decade", "Century", "Millennium"} },
             {"Volume", new string[] {"US liquid gallon", "US liquid quart", "US liquid pint", "US cup", "US fluid ounce", "US tablespoon", "US teaspoon", "Cubic meter", "Liter", "Milliliter", "Imperial gallon", "Imperial quart", "Imperial pint", "Imperial cup", "Imperial fluid ounce", "Imperial tablespoon", "Imperial teaspoon", "Cubic Foot", "Cubic Inch"} }
         };
 
@@ -155,7 +155,7 @@ namespace Unit_Converter
             
             Object[] parameters = { resultUnit.SelectedItem.ToString(), unitValue }; //object containing the arguments that will be passed into the selected method (see the methods in ConversionMethods class)
 
-            if (methodInfo != null) //if it can find the function name to match.
+            if (methodInfo != null) //if it can find the method name to match.
             {
                 object result = methodInfo.Invoke(conversionMethods, parameters); //call the function and pass in the object containing the argument for the method
                 conversionResult.Text = Math.Round((double)result, 8).ToString();
@@ -184,7 +184,7 @@ namespace Unit_Converter
             MethodInfo methodInfo = type.GetMethod(methodName);
             Object[] parameters = { resultUnit.SelectedItem.ToString(), unitValue };
 
-            if (methodInfo != null) //if it can find the function name to match
+            if (methodInfo != null) //if it can find the method name to match
             {
                 object result = methodInfo.Invoke(conversionMethods, parameters); 
                 conversionResult.Text = Math.Round((double)result, 8).ToString();
@@ -195,13 +195,13 @@ namespace Unit_Converter
         private string modifyString(string str) //changes the text from the comboboxes to perfectly match the method names in "ConversionMethods". modified from: https://stackoverflow.com/questions/7411438/remove-characters-from-c-sharp-string
         {
             //For example, the combobox may show "British thermal units (IT)". This needs to be modified to match the method name, which is "BritishthermalunitsIT".
-            //below iterates through the characters in "str" and only keeps the letters (no spaces, parenthesis, etc.)
+            
 
             string fixedString = new string((from c in str
                               where char.IsLetter(c)
                               select c
                    ).ToArray());
-            return fixedString; //return the new string
+            return fixedString;
         }
 
         private void switchUnits_Click(object sender, EventArgs e) //button that switches the selected text in the unit combo boxes (ex. "miles -> meters" changes to "meters -> miles")
