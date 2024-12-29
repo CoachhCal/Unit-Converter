@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "dgSpecHash": "/sxeH0b5gr0=",
+  "success": true,
+  "projectFilePath": "C:\\Programming\\Unit_Converter_Project\\UnitConverterTests\\UnitConverterTests.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\calvi\\.nuget\\packages\\microsoft.applicationinsights\\2.22.0\\microsoft.applicationinsights.2.22.0.nupkg.sha512",
+    "C:\\Users\\calvi\\.nuget\\packages\\microsoft.testing.extensions.telemetry\\1.4.3\\microsoft.testing.extensions.telemetry.1.4.3.nupkg.sha512",
+    "C:\\Users\\calvi\\.nuget\\packages\\microsoft.testing.extensions.trxreport.abstractions\\1.4.3\\microsoft.testing.extensions.trxreport.abstractions.1.4.3.nupkg.sha512",
+    "C:\\Users\\calvi\\.nuget\\packages\\microsoft.testing.extensions.vstestbridge\\1.4.3\\microsoft.testing.extensions.vstestbridge.1.4.3.nupkg.sha512",
+    "C:\\Users\\calvi\\.nuget\\packages\\microsoft.testing.platform\\1.4.3\\microsoft.testing.platform.1.4.3.nupkg.sha512",
+    "C:\\Users\\calvi\\.nuget\\packages\\microsoft.testing.platform.msbuild\\1.4.3\\microsoft.testing.platform.msbuild.1.4.3.nupkg.sha512",
+    "C:\\Users\\calvi\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.12.0\\microsoft.testplatform.objectmodel.17.12.0.nupkg.sha512",
+    "C:\\Users\\calvi\\.nuget\\packages\\microsoft.vcrtforwarders.140\\1.1.0\\microsoft.vcrtforwarders.140.1.1.0.nupkg.sha512",
+    "C:\\Users\\calvi\\.nuget\\packages\\mstest.analyzers\\3.7.0\\mstest.analyzers.3.7.0.nupkg.sha512",
+    "C:\\Users\\calvi\\.nuget\\packages\\mstest.testadapter\\3.6.4\\mstest.testadapter.3.6.4.nupkg.sha512",
+    "C:\\Users\\calvi\\.nuget\\packages\\mstest.testframework\\3.7.0\\mstest.testframework.3.7.0.nupkg.sha512",
+    "C:\\Users\\calvi\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\calvi\\.nuget\\packages\\system.collections.immutable\\1.5.0\\system.collections.immutable.1.5.0.nupkg.sha512",
+    "C:\\Users\\calvi\\.nuget\\packages\\system.diagnostics.diagnosticsource\\9.0.0\\system.diagnostics.diagnosticsource.9.0.0.nupkg.sha512",
+    "C:\\Users\\calvi\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\calvi\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\calvi\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512",
+    "C:\\Users\\calvi\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.1.0\\system.runtime.compilerservices.unsafe.6.1.0.nupkg.sha512",
+    "C:\\Users\\calvi\\.nuget\\packages\\system.threading.tasks.extensions\\4.6.0\\system.threading.tasks.extensions.4.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}
