@@ -71,7 +71,6 @@ namespace UnitConverterTests
             double result = (double)methodInfo.Invoke(conversionMethods, parameters);
             Assert.AreEqual(expected, result, 0.0001, $"Conversion from {unitToConvert} to {resultUnit} failed.");
         }
-
         private string modifyString(string str) {
             
             string fixedString = new string((from c in str
