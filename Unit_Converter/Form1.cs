@@ -1,15 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 
 namespace Unit_Converter
@@ -24,10 +19,10 @@ namespace Unit_Converter
 
         private string [] measurements = {"Area","Energy","Frequency","Length","Mass","Pressure","Speed","Temperature","Time","Volume"};
         
-        private Dictionary<string, string[]> measurementDict = new Dictionary<string, string[]> //this dictionary is used when selcting the physical quantity. Each key contains the appropriate units of measurement
+        private Dictionary<string, string[]> measurementDict = new Dictionary<string, string[]>
         {
-            {"Area", new string[] {"Square millimeter", "Square centimeter", "Square inch", "Square foot", "Square yard", "Square meter", "Acre", "Hectare", "Square Kilometer", "Square mile" } },
-            {"Energy", new string[] {"Joule", "Kilojoule", "Calorie", "Kilocalorie", "Watt-hour", "Kilowatt-hour","Foot-pound", "British thermal unit (IT)", "Therms (EC)" } },
+            {"Area", new string[] {"Square millimeter", "Square centimeter", "Square inch", "Square foot", "Square yard", "Square meter", "Acre", "Hectare", "Square kilometer", "Square mile" } },
+            {"Energy", new string[] {"Joule", "Kilojoule", "Calorie", "Kilocalorie", "Watt-hour", "Kilowatt-hour","Foot-pound", "British thermal unit (IT)", "Therm (EC)" } },
             {"Frequency", new string[] {"Hertz", "Kilohertz", "Megahertz", "Gigahertz"} },
             {"Length", new string[] {"Nanometer", "Micrometer", "Millimeter", "Centimeter", "Inch", "Foot", "Yard", "Meter", "Kilometer", "Mile", "Nautical mile"} },
             {"Mass", new string[] {"Microgram", "Milligram", "Gram", "Ounce", "Pound", "Kilogram", "Stone (UK)", "US ton", "Imperial ton", "Metric ton"} },
@@ -35,7 +30,7 @@ namespace Unit_Converter
             {"Speed", new string[] {"Foot per second", "Meter per second", "Kilometer per hour", "Mile per hour", "Knot" } },
             {"Temperature", new string[] {"Celsius", "Fahrenheit", "Kelvin"} },
             {"Time", new string[] {"Nanosecond", "Microsecond", "Millisecond", "Second", "Minute", "Hour", "Day", "Week", "Month", "Calendar year", "Decade", "Century", "Millennium"} },
-            {"Volume", new string[] {"US liquid gallon", "US liquid quart", "US liquid pint", "US cup", "US fluid ounce", "US tablespoon", "US teaspoon", "Cubic meter", "Liter", "Milliliter", "Imperial gallon", "Imperial quart", "Imperial pint", "Imperial cup", "Imperial fluid ounce", "Imperial tablespoon", "Imperial teaspoon", "Cubic Foot", "Cubic Inch"} }
+            {"Volume", new string[] {"US liquid gallon", "US liquid quart", "US liquid pint", "US cup", "US fluid ounce", "US tablespoon", "US teaspoon", "Cubic meter", "Liter", "Milliliter", "Imperial gallon", "Imperial quart", "Imperial pint", "Imperial cup", "Imperial fluid ounce", "Imperial tablespoon", "Imperial teaspoon", "Cubic foot", "Cubic inch"} }
         };
 
         public Form1()
@@ -114,7 +109,7 @@ namespace Unit_Converter
 
         private void measurementComboBox_SelectedIndexChanged(object sender, EventArgs e) //changing the physical quantity (length, mass, speed, etc)
         {
-            //clear bot of the combo boxes containing the units of measurements
+            
             convertUnit.Items.Clear(); 
             resultUnit.Items.Clear();
 
@@ -175,8 +170,6 @@ namespace Unit_Converter
                 return;
             }
 
-
-            
             Type type = typeof(ConversionMethods);
             
             string methodName = modifyString(convertUnit.SelectedItem.ToString());
@@ -223,6 +216,31 @@ namespace Unit_Converter
         {
             if (string.IsNullOrWhiteSpace(notesBox.Text))
                 notesBox.Text = "Notes...";
+        }
+
+        private void convertUnit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!double.TryParse(unitToConvert.Text, out double unitValue))
+            {
+                return;
+            }
+
+            Type type = typeof(ConversionMethods);
+
+            string methodName = modifyString(convertUnit.SelectedItem.ToString());
+
+            MethodInfo methodInfo = type.GetMethod(methodName);
+
+            if (resultUnit.SelectedItem != null)
+            {
+                Object[] parameters = { resultUnit.SelectedItem.ToString(), unitValue };
+
+                if (methodInfo != null) //if it can find the method name to match
+                {
+                    object result = methodInfo.Invoke(conversionMethods, parameters);
+                    conversionResult.Text = Math.Round((double)result, 8).ToString();
+                }
+            }
         }
     }
 }

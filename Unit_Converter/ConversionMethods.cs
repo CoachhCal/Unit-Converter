@@ -904,70 +904,70 @@ namespace Unit_Converter
         /// 
         /// </summary>
 
-        public double Joules(string unit, double number)
+        public double Joule(string unit, double number)
         {
             switch (unit)
             {
-                case "Joules": return number;
-                case "Kilojoules": return number * 0.001;
-                case "Calories": return number * 0.2390057361;
-                case "Kilocalories": return number * 0.0002390057;
+                case "Joule": return number;
+                case "Kilojoule": return number * 0.001;
+                case "Calorie": return number * 0.2390057361;
+                case "Kilocalorie": return number * 0.0002390057;
                 case "Watt-hour": return number * 0.0002777778;
                 case "Kilowatt-hour": return number * 2.777777777E-7;
                 case "Foot-pound": return number * 0.7375621493;
-                case "British thermal units (IT)": return number * 0.0009478171;
-                case "Therms (EC)": return number * 9.478169879E-9;
+                case "British thermal unit (IT)": return number * 0.0009478171;
+                case "Therm (EC)": return number * 9.478169879E-9;
                 default: return 0;
             }
         }
 
-        public double Kilojoules(string unit, double number) //Not done. unsure about btbu's if they are th or it
+        public double Kilojoule(string unit, double number) //Not done. unsure about btbu's if they are th or it
         {
             switch (unit)
             {
-                case "Joules": return number * 1000;
-                case "Kilojoules": return number;
-                case "Calories": return number * 239.00573614;
-                case "Kilocalories": return number * 0.2390057361;
+                case "Joule": return number * 1000;
+                case "Kilojoule": return number;
+                case "Calorie": return number * 239.00573614;
+                case "Kilocalorie": return number * 0.2390057361;
                 case "Watt-hour": return number * 0.2777777778;
                 case "Kilowatt-hour": return number * 0.0002777778;
                 case "Foot-pound": return number * 737.5621493;
-                case "British thermal units (IT)": return number * 0.9478171203;
-                case "Therms (EC)": return number * 0.0000094782;
+                case "British thermal unit (IT)": return number * 0.9478171203;
+                case "Therm (EC)": return number * 0.0000094782;
                 default: return 0;
             }
         }
 
-        public double Calories(string unit, double number)
+        public double Calorie(string unit, double number)
         {
             switch (unit)
             {
-                case "Joules": return number * 4.1868;
-                case "Kilojoules": return number * 0.0041868;
-                case "Calories": return number;
-                case "Kilocalories": return number * 0.001;
+                case "Joule": return number * 4.1868;
+                case "Kilojoule": return number * 0.0041868;
+                case "Calorie": return number;
+                case "Kilocalorie": return number * 0.001;
                 case "Watt-hour": return number * 0.001163;
                 case "Kilowatt-hour": return number * 0.000001163;
                 case "Foot-pound": return number * 3.0880252067;
-                case "British thermal units (IT)": return number * 0.0039683207;
-                case "Therms (EC)": return number * 3.968320164E-8;
+                case "British thermal unit (IT)": return number * 0.0039683207;
+                case "Therm (EC)": return number * 3.968320164E-8;
                 default: return 0;
             }
         }
 
-        public double Kilocalories(string unit, double number)
+        public double Kilocalorie(string unit, double number)
         {
             switch (unit)
             {
-                case "Joules": return number * 4186.8;
-                case "Kilojoules": return number * 4.1868;
-                case "Calories": return number * 1000;
-                case "Kilocalories": return number;
+                case "Joule": return number * 4186.8;
+                case "Kilojoule": return number * 4.1868;
+                case "Calorie": return number * 1000;
+                case "Kilocalorie": return number;
                 case "Watt-hour": return number * 1.163;
                 case "Kilowatt-hour": return number * 0.001163;
                 case "Foot-pound": return number * 3088.0252067;
-                case "British thermal units (IT)": return number * 3.9683207193;
-                case "Therms (EC)": return number * 0.0000396832;
+                case "British thermal unit (IT)": return number * 3.9683207193;
+                case "Therm (EC)": return number * 0.0000396832;
                 default: return 0;
             }
         }
@@ -976,15 +976,15 @@ namespace Unit_Converter
         {
             switch (unit)
             {
-                case "Joules": return number * 3600;
-                case "Kilojoules": return number * 3.6;
-                case "Calories": return number * 859.84522786;
-                case "Kilocalories": return number * 0.8598452279;
+                case "Joule": return number * 3600;
+                case "Kilojoule": return number * 3.6;
+                case "Calorie": return number * 859.84522786;
+                case "Kilocalorie": return number * 0.8598452279;
                 case "Watt-hour": return number;
                 case "Kilowatt-hour": return number * 0.001;
                 case "Foot-pound": return number * 2655.2237375;
-                case "British thermal units (IT)": return number * 3.4121416331;
-                case "Therms (EC)": return number * 0.0000341214;
+                case "British thermal unit (IT)": return number * 3.4121416331;
+                case "Therm (EC)": return number * 0.0000341214;
                 default: return 0;
             }
         }
@@ -993,15 +993,15 @@ namespace Unit_Converter
         {
             switch (unit)
             {
-                case "Joules": return number * 3600000;
-                case "Kilojoules": return number * 3600;
-                case "Calories": return number * 859845.22786;
-                case "Kilocalories": return number * 859.84522786;
+                case "Joule": return number * 3600000;
+                case "Kilojoule": return number * 3600;
+                case "Calorie": return number * 859845.22786;
+                case "Kilocalorie": return number * 859.84522786;
                 case "Watt-hour": return number * 1000;
                 case "Kilowatt-hour": return number;
                 case "Foot-pound": return number * 2655223.7375;
-                case "British thermal units (IT)": return number * 3412.1416331;
-                case "Therms (EC)": return number * 0.0341214116;
+                case "British thermal unit (IT)": return number * 3412.1416331;
+                case "Therm (EC)": return number * 0.0341214116;
                 default: return 0;
             }
         }
@@ -1010,49 +1010,49 @@ namespace Unit_Converter
         {
             switch (unit)
             {
-                case "Joules": return number * 1.3558179483;
-                case "Kilojoules": return number * 0.0013558179;
-                case "Calories": return number * 0.3238315535;
-                case "Kilocalories": return number * 0.0003238316;
+                case "Joule": return number * 1.3558179483;
+                case "Kilojoule": return number * 0.0013558179;
+                case "Calorie": return number * 0.3238315535;
+                case "Kilocalorie": return number * 0.0003238316;
                 case "Watt-hour": return number * 0.0003766161;
                 case "Kilowatt-hour": return number * 3.766160967E-7;
                 case "Foot-pound": return number;
-                case "British thermal units (IT)": return number * 0.0012850675;
-                case "Therms (EC)": return number * 1.285067283E-8;
+                case "British thermal unit (IT)": return number * 0.0012850675;
+                case "Therm (EC)": return number * 1.285067283E-8;
                 default: return 0;
             }
         }
 
-        public double BritishthermalunitsIT(string unit, double number)
+        public double BritishthermalunitIT(string unit, double number)
         {
             switch (unit)
             {
-                case "Joules": return number * 1055.0558526;
-                case "Kilojoules": return number * 1.0550558526;
-                case "Calories": return number * 251.99576111;
-                case "Kilocalories": return number * 0.2519957611;
+                case "Joule": return number * 1055.0558526;
+                case "Kilojoule": return number * 1.0550558526;
+                case "Calorie": return number * 251.99576111;
+                case "Kilocalorie": return number * 0.2519957611;
                 case "Watt-hour": return number * 0.2930710702;
                 case "Kilowatt-hour": return number * 0.0002930711;
                 case "Foot-pound": return number * 778.16926229;
-                case "British thermal units (IT)": return number;
-                case "Therms (EC)": return number * 0.00001;
+                case "British thermal unit (IT)": return number;
+                case "Therm (EC)": return number * 0.00001;
                 default: return 0;
             }
         }
 
-        public double ThermsEC(string unit, double number)
+        public double ThermEC(string unit, double number)
         {
             switch (unit)
             {
-                case "Joules": return number * 105505600;
-                case "Kilojoules": return number * 105505.6;
-                case "Calories": return number * 25199579.631;
-                case "Kilocalories": return number * 25199.579631;
+                case "Joule": return number * 105505600;
+                case "Kilojoule": return number * 105505.6;
+                case "Calorie": return number * 25199579.631;
+                case "Kilocalorie": return number * 25199.579631;
                 case "Watt-hour": return number * 29307.111111;
                 case "Kilowatt-hour": return number * 29.307111111;
                 case "Foot-pound": return number * 77816937.099;
-                case "British thermal units (IT)": return number * 100000.01397;
-                case "Therms (EC)": return number;
+                case "British thermal unit (IT)": return number * 100000.01397;
+                case "Therm (EC)": return number;
                 default: return 0;
             }
         }
@@ -1659,8 +1659,8 @@ namespace Unit_Converter
                 case "Square foot": return number * 1.0764E-5;
                 case "Square yard": return number * 1.196E-6;
                 case "Square meter": return number * 1.0E-6;
-                case "Acres": return number * 2.4711E-10;
-                case "Hectares": return number * 1.0E-10;
+                case "Acre": return number * 2.4711E-10;
+                case "Hectare": return number * 1.0E-10;
                 case "Square kilometer": return number * 1.0E-12;
                 case "Square mile": return number * 3.861E-13;
                 default: return 0;
@@ -1677,8 +1677,8 @@ namespace Unit_Converter
                 case "Square foot": return number * 0.001076;
                 case "Square yard": return number * 0.00012;
                 case "Square meter": return number * 0.0001;
-                case "Acres": return number * 2.4711E-8;
-                case "Hectares": return number * 1.0E-8;
+                case "Acre": return number * 2.4711E-8;
+                case "Hectare": return number * 1.0E-8;
                 case "Square kilometer": return number * 1.0E-10;
                 case "Square mile": return number * 3.861E-11;
                 default: return 0;
@@ -1695,8 +1695,8 @@ namespace Unit_Converter
                 case "Square foot": return number * 0.006944;
                 case "Square yard": return number * 0.000772;
                 case "Square meter": return number * 0.000645;
-                case "Acres": return number * 1.5942E-7;
-                case "Hectares": return number * 6.4516E-8;
+                case "Acre": return number * 1.5942E-7;
+                case "Hectare": return number * 6.4516E-8;
                 case "Square kilometer": return number * 6.4516E-10;
                 case "Square mile": return number * 2.491E-10;
                 default: return 0;
@@ -1713,8 +1713,8 @@ namespace Unit_Converter
                 case "Square foot": return number;
                 case "Square yard": return number * 0.111111;
                 case "Square meter": return number * 0.092903;
-                case "Acres": return number * 2.2957E-5;
-                case "Hectares": return number * 9.2903E-6;
+                case "Acre": return number * 2.2957E-5;
+                case "Hectare": return number * 9.2903E-6;
                 case "Square kilometer": return number * 9.2903E-8;
                 case "Square mile": return number * 3.587E-8;
                 default: return 0;
@@ -1731,8 +1731,8 @@ namespace Unit_Converter
                 case "Square foot": return number * 9;
                 case "Square yard": return number;
                 case "Square meter": return number * 0.836127;
-                case "Acres": return number * 0.000207;
-                case "Hectares": return number * 8.3613E-5;
+                case "Acre": return number * 0.000207;
+                case "Hectare": return number * 8.3613E-5;
                 case "Square kilometer": return number * 8.3613E-7;
                 case "Square mile": return number * 3.2283E-7;
                 default: return 0;
@@ -1749,15 +1749,15 @@ namespace Unit_Converter
                 case "Square foot": return number * 10.76391;
                 case "Square yard": return number * 1.19599;
                 case "Square meter": return number;
-                case "Acres": return number * 0.000247;
-                case "Hectares": return number * 0.0001;
+                case "Acre": return number * 0.000247;
+                case "Hectare": return number * 0.0001;
                 case "Square kilometer": return number * 1.0E-6;
                 case "Square mile": return number * 3.861E-7;
                 default: return 0;
             }
         }
 
-        public double Acres(string unit, double number)
+        public double Acre(string unit, double number)
         {
             switch (unit)
             {
@@ -1767,15 +1767,15 @@ namespace Unit_Converter
                 case "Square foot": return number * 43560;
                 case "Square yard": return number * 4840;
                 case "Square meter": return number * 4046.856422;
-                case "Acres": return number;
-                case "Hectares": return number * 0.404686;
+                case "Acre": return number;
+                case "Hectare": return number * 0.404686;
                 case "Square kilometer": return number * 0.004047;
                 case "Square mile": return number * 0.001563;
                 default: return 0;
             }
         }
 
-        public double Hectares(string unit, double number)
+        public double Hectare(string unit, double number)
         {
             switch (unit)
             {
@@ -1785,8 +1785,8 @@ namespace Unit_Converter
                 case "Square foot": return number * 107639.104167;
                 case "Square yard": return number * 107639.104167;
                 case "Square meter": return number * 10000;
-                case "Acres": return number * 2.471054;
-                case "Hectares": return number;
+                case "Acre": return number * 2.471054;
+                case "Hectare": return number;
                 case "Square kilometer": return number * 0.01;
                 case "Square mile": return number * 0.003861;
                 default: return 0;
@@ -1803,8 +1803,8 @@ namespace Unit_Converter
                 case "Square foot": return number * 10763910.41671;
                 case "Square yard": return number * 1195990.046301;
                 case "Square meter": return number * 1000000;
-                case "Acres": return number * 247.105381;
-                case "Hectares": return number * 100;
+                case "Acre": return number * 247.105381;
+                case "Hectare": return number * 100;
                 case "Square kilometer": return number;
                 case "Square mile": return number * 0.386102;
                 default: return 0;
@@ -1821,8 +1821,8 @@ namespace Unit_Converter
                 case "Square foot": return number * 27878400;
                 case "Square yard": return number * 3097600;
                 case "Square meter": return number * 2589988.110336;
-                case "Acres": return number * 640;
-                case "Hectares": return number * 258.998811;
+                case "Acre": return number * 640;
+                case "Hectare": return number * 258.998811;
                 case "Square kilometer": return number * 2.589988;
                 case "Square mile": return number;
                 default: return 0;

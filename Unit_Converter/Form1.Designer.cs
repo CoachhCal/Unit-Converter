@@ -194,6 +194,7 @@ namespace Unit_Converter
             this.convertUnit.Name = "convertUnit";
             this.convertUnit.Size = new System.Drawing.Size(188, 26);
             this.convertUnit.TabIndex = 4;
+            this.convertUnit.SelectedIndexChanged += new System.EventHandler(this.convertUnit_SelectedIndexChanged);
             // 
             // resultUnit
             // 
