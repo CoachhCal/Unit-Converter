@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace Unit_Converter
 {
@@ -48,6 +49,7 @@ namespace Unit_Converter
             this.switchUnits = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.notesBox = new System.Windows.Forms.TextBox();
+            this.Icon = new Icon("C:\\Programming\\Unit_Converter_Project\\Unit_Converter\\images\\UCIcon.ico");
             this.header.SuspendLayout();
             this.panelFormButtons.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
