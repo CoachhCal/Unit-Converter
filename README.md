@@ -38,9 +38,8 @@ Conversion factors were taken from the default unit converter in google chrome a
   git clone https://github.com/CoachhCal/Unit-Converter.git
   ```
 
-- ### Executable
-
-  TBD
+  Run the solution:
+  ```Unit_Converter.sln```
 
 ## Customizing the Unit Converter
 
